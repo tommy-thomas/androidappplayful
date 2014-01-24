@@ -8,7 +8,7 @@ import android.webkit.WebView;
 public class WarOfTheWorlds extends Activity {
 
 	WebView pointer;
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

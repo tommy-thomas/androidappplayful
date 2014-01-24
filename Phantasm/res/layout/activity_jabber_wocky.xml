@@ -14,4 +14,12 @@
         android:layout_height="match_parent"
         android:layout_centerHorizontal="true" />
 
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/webView1"
+        android:layout_alignLeft="@+id/webView1"
+        android:text="@string/wikipedia" />
+
 </RelativeLayout>
