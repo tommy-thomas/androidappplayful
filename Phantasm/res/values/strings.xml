@@ -6,5 +6,11 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_jabber_wocky">JabberWocky</string>
     <string name="wikipedia">Wikipedia</string>
+    <string name="wiki">wikipedia</string>
+    <string name="surprise">surprise</string>
+    <string name="show_image">Show Image</string>
+    <string name="show_text">Show Text</string>
+    <string name="title_activity_roundball">Roundball</string>
+    <string name="title_activity_nasa">Nasa</string>
 
 </resources>

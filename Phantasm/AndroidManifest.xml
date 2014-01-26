@@ -16,7 +16,8 @@
         <activity
             android:name="com.sandbox.phantasm.WarOfTheWorlds"
             android:label="@string/app_name"
-            android:noHistory="true" >
+            android:noHistory="true"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,11 +25,33 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.sandbox.phantasm.JabberWocky"
+            android:name="com.sandbox.phantasm.Jabberwocky"
             android:label="@string/title_activity_jabber_wocky"
-             android:noHistory="true" >
+            android:noHistory="true"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.sandbox.phantasm.Roundball"
+            android:label="@string/title_activity_roundball"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.sandbox.phantasm.Nasa"
+            android:label="@string/title_activity_nasa"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

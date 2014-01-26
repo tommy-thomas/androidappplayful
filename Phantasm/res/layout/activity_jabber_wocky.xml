@@ -6,20 +6,32 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".JabberWocky" >
+    tools:context=".Jabberwocky" >
+
+    <Button
+        android:id="@+id/wiki"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="25dp"
+        android:onClick="openWiki"
+        android:text="@string/wiki" />
 
     <WebView
         android:id="@+id/webView1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_above="@id/wiki"
         android:layout_centerHorizontal="true" />
 
-    <Button
-        android:id="@+id/button1"
+    <ToggleButton
+        android:id="@+id/togglebutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/webView1"
-        android:layout_alignLeft="@+id/webView1"
-        android:text="@string/wikipedia" />
+        android:layout_alignRight="@+id/webView1"
+        android:layout_alignTop="@+id/wiki"
+        android:onClick="onToggleClicked"
+        android:textOff="@string/show_image"
+        android:textOn="@string/show_text" />
 
 </RelativeLayout>

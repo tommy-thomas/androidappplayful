@@ -1,20 +1,22 @@
 package com.sandbox.phantasm;
 
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
-import android.app.ActionBar.LayoutParams;
 import android.app.Activity;
+import android.content.Intent;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
+import android.view.View;
 import android.webkit.WebView;
-import android.widget.Button;
-import android.widget.LinearLayout;
+import android.widget.ToggleButton;
 
-public class JabberWocky extends Activity {
+public class Jabberwocky extends Activity {
 
 	MediaPlayer mp;
 	WebView pointer;
+	String wikipedia = "http://en.wikipedia.org/wiki/Jabberwocky";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +24,6 @@ public class JabberWocky extends Activity {
 		setContentView(R.layout.activity_jabber_wocky);
 		// find webView
 		pointer = (WebView) findViewById(R.id.webView1);
-		pointer.getSettings().setBuiltInZoomControls(true);
 		// open index.html
 		pointer.loadUrl("file:///android_asset/jabberwocky/index.html");
 	}
@@ -40,6 +41,24 @@ public class JabberWocky extends Activity {
 		mp.stop();
 		mp.release();
 		super.onPause();
+	}
+
+	public void openWiki(View v) {
+		String url = wikipedia;
+		Intent i = new Intent(Intent.ACTION_VIEW);
+		i.setData(Uri.parse(url));
+		startActivity(i);
+	}
+
+	public void onToggleClicked(View view) {
+		// Is the toggle on?
+		boolean on = ((ToggleButton) view).isChecked();
+		if (on) {
+			// If on, show image
+			pointer.loadUrl("file:///android_asset/jabberwocky/jabberwocky2.png");
+		} else {
+			pointer.loadUrl("file:///android_asset/jabberwocky/index.html");
+		}
 	}
 
 	@Override
